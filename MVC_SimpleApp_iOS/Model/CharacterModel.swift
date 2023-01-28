@@ -12,6 +12,7 @@ struct CharacterModel: Decodable {
     //Generamos estas constantes que será la información que contenga cada uno de los Characters.
     let name: String
     let status: String
-    let specias: String
+    let species: String
     let image: String
+    
 }

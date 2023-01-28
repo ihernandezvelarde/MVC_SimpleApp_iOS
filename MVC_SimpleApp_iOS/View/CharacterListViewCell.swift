@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Kingfisher //Libreria para las imagenes
 
 class CharacterListViewCell: UITableViewCell {
     
@@ -66,10 +67,17 @@ class CharacterListViewCell: UITableViewCell {
             characterStatus.leadingAnchor.constraint(equalTo: characterName.leadingAnchor),
             characterStatus.topAnchor.constraint(equalTo: characterName.bottomAnchor, constant: 8),
             
-            characterStatus.leadingAnchor.constraint(equalTo: characterName.leadingAnchor),
-            characterStatus.topAnchor.constraint(equalTo: characterStatus.bottomAnchor, constant: 8)
+            characterSpecie.leadingAnchor.constraint(equalTo: characterName.leadingAnchor),
+            characterSpecie.topAnchor.constraint(equalTo: characterStatus.bottomAnchor, constant: 8)
         ])
 
+    }
+    //Funcion para setear los valores de la tableView
+    func configure(_ model: CharacterModel) {
+        self.characterName.text = model.name
+        self.characterSpecie.text = model.species
+        self.characterStatus.text = model.status
+        self.characterImageView.kf.setImage(with: URL(string: model.image))
     }
     
 }
