@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0444D3E9298AE52F007D5327 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444D3E8298AE52F007D5327 /* CharacterDetailView.swift */; };
+		0444D3EB298AE5E8007D5327 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0444D3EA298AE5E8007D5327 /* CharacterDetailViewController.swift */; };
 		046210C0298534C5000AF56E /* ListOfCharctersTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046210BF298534C5000AF56E /* ListOfCharctersTableViewDataSource.swift */; };
 		046210C329853EAF000AF56E /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 046210C229853EAF000AF56E /* Kingfisher */; };
 		046210C52985413E000AF56E /* ListOfCharactersTableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 046210C42985413E000AF56E /* ListOfCharactersTableViewDelegate.swift */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0444D3E8298AE52F007D5327 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		0444D3EA298AE5E8007D5327 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 		046210BF298534C5000AF56E /* ListOfCharctersTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCharctersTableViewDataSource.swift; sourceTree = "<group>"; };
 		046210C42985413E000AF56E /* ListOfCharactersTableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCharactersTableViewDelegate.swift; sourceTree = "<group>"; };
 		04C6AD022982E5A7007DC554 /* MVC_SimpleApp_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVC_SimpleApp_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -53,6 +57,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0444D3E3298AE4DC007D5327 /* ListOfCharacters */ = {
+			isa = PBXGroup;
+			children = (
+				04C6AD192982F584007DC554 /* Model */,
+				04C6AD1A2982F58A007DC554 /* View */,
+				04C6AD1B2982F58F007DC554 /* Controller */,
+			);
+			path = ListOfCharacters;
+			sourceTree = "<group>";
+		};
+		0444D3E4298AE50A007D5327 /* CharacterDetail */ = {
+			isa = PBXGroup;
+			children = (
+				0444D3E5298AE513007D5327 /* Model */,
+				0444D3E6298AE518007D5327 /* View */,
+				0444D3E7298AE51C007D5327 /* Controller */,
+			);
+			path = CharacterDetail;
+			sourceTree = "<group>";
+		};
+		0444D3E5298AE513007D5327 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0444D3E6298AE518007D5327 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0444D3E8298AE52F007D5327 /* CharacterDetailView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0444D3E7298AE51C007D5327 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0444D3EA298AE5E8007D5327 /* CharacterDetailViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		04C6ACF92982E5A7007DC554 = {
 			isa = PBXGroup;
 			children = (
@@ -72,11 +119,10 @@
 		04C6AD042982E5A7007DC554 /* MVC_SimpleApp_iOS */ = {
 			isa = PBXGroup;
 			children = (
-				04C6AD192982F584007DC554 /* Model */,
-				04C6AD1A2982F58A007DC554 /* View */,
-				04C6AD1B2982F58F007DC554 /* Controller */,
 				04C6AD052982E5A7007DC554 /* AppDelegate.swift */,
 				04C6AD072982E5A7007DC554 /* SceneDelegate.swift */,
+				0444D3E4298AE50A007D5327 /* CharacterDetail */,
+				0444D3E3298AE4DC007D5327 /* ListOfCharacters */,
 				04C6AD0E2982E5AC007DC554 /* Assets.xcassets */,
 				04C6AD102982E5AC007DC554 /* LaunchScreen.storyboard */,
 				04C6AD132982E5AC007DC554 /* Info.plist */,
@@ -192,6 +238,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04C6AD1F2982F908007DC554 /* CharacterModelResponse.swift in Sources */,
+				0444D3EB298AE5E8007D5327 /* CharacterDetailViewController.swift in Sources */,
+				0444D3E9298AE52F007D5327 /* CharacterDetailView.swift in Sources */,
 				04C6AD0A2982E5A7007DC554 /* CharacterListViewController.swift in Sources */,
 				04C6AD2529846F8D007DC554 /* CharacterListViewCell.swift in Sources */,
 				04C6AD062982E5A7007DC554 /* AppDelegate.swift in Sources */,

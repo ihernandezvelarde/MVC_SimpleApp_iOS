@@ -31,6 +31,24 @@ class CharacterListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //Aqui obtenemos el index de la celda pulsada
+        tableViewDelegate?.didTapOnCell = { [weak self] index in
+            print("index\(index)")
+            
+            //Cogemos el modelo a partir del array que tenemos en el dataSource
+            guard let dataSource = self?.tableViewDataSource else {
+                return
+            }
+            //Como sabemos la celda que se a pulsado podemos extraer el modelo
+            let characterModel = dataSource.characters[index]
+            
+            //Una vez extraemos el modelo, inicializamos el viewController con esta información
+            let characterDetailViewController = CharacterDetailViewController(characterDetailModel: characterModel)
+            
+            //Presentamos el DetailViewController
+            self?.present(characterDetailViewController, animated: true)
+        }
         // Una vez se haya cargado nuestra vista haremos nuestra preticion a http
         Task {
             let characters = await apiClient.getListOfCharacters()
@@ -38,9 +56,4 @@ class CharacterListViewController: UIViewController {
             tableViewDataSource?.set(characters: characters.results)
         }
     }
-    
-    
-
-
 }
-
